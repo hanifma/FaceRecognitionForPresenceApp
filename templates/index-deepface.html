@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "/head.html" %}
+  </head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+  <style>
+    th {
+      text-align: center;
+      align-content: center;
+    }
+    ::placeholder {
+      text-align: center;
+    }
+    ::-webkit-input-placeholder {
+      text-align: center;
+    }
+
+    :-moz-placeholder {
+      /* Firefox 18- */
+      text-align: center;
+    }
+
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      text-align: center;
+    }
+
+    :-ms-input-placeholder {
+      text-align: center;
+    }
+  </style>
+  <body>
+    {% include "/navbar.html" %}
+
+    <section class="container d-flex flex-column min-vh-100 bg-light mw-500">
+      <table>
+        <tr>
+          <th>
+            <center>
+              <div id="my_camera"></div>
+            </center>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <div id="my_camera"></div>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <!-- <form action="http://127.0.0.1:5000/deepface" method="POST"> -->
+            <p>
+              <input
+                type="text"
+                id="nip"
+                name="nip"
+                placeholder="Masukan NIP"
+                required />
+            </p>
+            <p>
+              <button
+                type="button"
+                value="Submit"
+                id="send"
+                class="btn btn-primary"
+                onclick="take_snapshot();">
+                Submit
+              </button>
+            </p>
+            <!-- </form> -->
+            <form action="/recognition" method="post">
+              <input type="hidden" id="data" name="data" />
+              <button type="submit">Save</button>
+            </form>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <div id="results">Preview:</div>
+          </th>
+        </tr>
+      </table>
+    </section>
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+    <script>
+      Webcam.set({
+        width: 640,
+        height: 480,
+        image_format: "jpeg",
+        jpeg_quality: 90,
+      });
+
+      Webcam.attach("#my_camera");
+
+      var video = document.createElement("video");
+      var canvas = document.createElement("canvas");
+      var ctx = canvas.getContext("2d");
+
+      navigator.mediaDevices
+        .getUserMedia({ video: true })
+        .then(function (stream) {
+          video.srcObject = stream;
+          video.play();
+        });
+
+      function take_snapshot() {
+        Webcam.snap(function (data_uri) {
+          $(".image-tag").val(data_uri);
+          document.getElementById("results").innerHTML =
+            '<img src="' + data_uri + '" style="width:640px;height:480px"/>';
+        });
+      }
+
+      document.getElementById("send").addEventListener("click", function () {
+        const nip = document.getElementById("nip").value;
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        var imgData = canvas.toDataURL();
+
+        fetch("http://127.0.0.1:5000/deepface", {
+          method: "POST",
+          body: JSON.stringify({ imgData: imgData, nip: nip }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        window.location = "https://www.google.com";
+      });
+    </script>
+  </body>
+</html>
