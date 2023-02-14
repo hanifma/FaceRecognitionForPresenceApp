@@ -10,6 +10,19 @@ dengan model yang digunakan adalah [`Dlib`](https://sefiks.com/2020/07/11/face-r
 
 <img width="760" alt="Screenshot 2023-02-14 at 16 08 35" src="https://user-images.githubusercontent.com/30397639/218692115-c876854a-834f-4e83-8784-ebf28db02d8c.png">
 
+## Performance Matrix Model Facenet512, ArcFace, and Dlib
+
+Test results of 190x from 20 facial images (10 people)
+
+| Metric | Facenet512 | ArcFace | Dlib |
+| ---   | --- | --- | --- |
+| Sensitivity | 0.8 | 0.9 | 1 |
+| Specificity | 0.9722 | 0.9222 | 0.9231 |
+| Accuracy | 0.9632 | 0.9211 | 0.9263 |
+| Precission | 0.6154 | 0.3913 | 0.3636 |
+| F1 Score | 0.6957 | 0.5455 | 0.5333 |
+| Avg. Processing Time (s) | 0.27 | 0.23 | 0.18 |
+
 ## Database Design 
 
 <img width="500" alt="Screenshot 2023-02-14 at 16 08 59" src="https://user-images.githubusercontent.com/30397639/218692304-462e6b5d-3d39-4dac-8d9b-7b1eec148196.png">
