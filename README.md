@@ -1,17 +1,14 @@
-## <div align="center">Verification System in Student Attendance Case Study</div>
-
-<div align="center">
-  <img src="https://i.ibb.co/HgNL1Cf/app-logo.png" alt="app-logo" border="0" width="150px">
-</div>
+## <div align="center">Presence App</div>
 
 <br/>
 
-Repository ini berisi implementasi proyek tugas akhir yang berjudul "Perancangan Arsitektur Sistem Verifikasi Berbasis Face Recognition dalam Studi Kasus Absensi Mahasiswa".
+Repository ini berisi implementasi proyek tugas akhir yang berjudul "Perancangan Arsitektur Face Recognition Untuk Presensi Karyawan".
 Sistem ini dikembangkan menggunakan bahasa pemrograman [python](https://www.python.org/), framework [flask](https://flask.palletsprojects.com/en/2.2.x/) dan [deepface](https://github.com/serengil/deepface) 
-dengan model yang digunakan adalah [`Facenet`](https://sefiks.com/2018/09/03/face-recognition-with-facenet-in-keras/) dan detector [`MTCNN`](https://sefiks.com/2020/09/09/deep-face-detection-with-mtcnn-in-python/).
+dengan model yang digunakan adalah [`Dlib`](https://sefiks.com/2020/07/11/face-recognition-with-dlib-in-python/) dan detector [`opencv`](https://sefiks.com/2020/02/23/face-alignment-for-face-recognition-in-python-within-opencv/).
 
 ## How to Run Project
 
+Project ini dikembangkan pada MacOS, jadi untuk instalasi di Windows bisa di sesuaikan.
 Untuk menjalankan projek dapat mengikuti langkah-langkah berikut.
 - Buat direktori baru untuk menyimpan projek
 - Buka direktori tersebut melalui IDE Visual Studio Code atau code editor favorit
