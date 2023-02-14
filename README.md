@@ -53,3 +53,7 @@ $ python app.py
 - Tambahkan data terlebih dahulu pada link http://127.0.0.1:5000/admin/tambah_data
 - Lakukan presensi pada link http://127.0.0.1:5000/take_foto dan submit
 - History presensi dapat dilihat pada link http://127.0.0.1:5000/history
+
+## Snapshoot Presence App
+
+![Snapshoot Presence App](https://user-images.githubusercontent.com/30397639/218708019-83275b89-7ef2-43e7-8196-705d2dd48da4.jpg)
