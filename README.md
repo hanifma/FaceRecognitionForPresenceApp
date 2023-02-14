@@ -6,7 +6,15 @@ Repository ini berisi implementasi proyek tugas akhir yang berjudul "Perancangan
 Sistem ini dikembangkan menggunakan bahasa pemrograman [python](https://www.python.org/), framework [flask](https://flask.palletsprojects.com/en/2.2.x/) dan [deepface](https://github.com/serengil/deepface) 
 dengan model yang digunakan adalah [`Dlib`](https://sefiks.com/2020/07/11/face-recognition-with-dlib-in-python/) dan face detector [`OpenCV`](https://sefiks.com/2020/02/23/face-alignment-for-face-recognition-in-python-within-opencv/).
 
-## How to Run Project
+## Architecture
+
+<img width="760" alt="Screenshot 2023-02-14 at 16 08 35" src="https://user-images.githubusercontent.com/30397639/218692115-c876854a-834f-4e83-8784-ebf28db02d8c.png">
+
+## Database Design 
+
+<img width="500" alt="Screenshot 2023-02-14 at 16 08 59" src="https://user-images.githubusercontent.com/30397639/218692304-462e6b5d-3d39-4dac-8d9b-7b1eec148196.png">
+
+## How to Install Project
 
 Project ini dikembangkan pada MacOS, jadi untuk instalasi di Windows bisa di sesuaikan.
 Untuk menjalankan projek dapat mengikuti langkah-langkah berikut.
