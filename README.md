@@ -16,7 +16,7 @@ dengan model yang digunakan adalah [`Dlib`](https://sefiks.com/2020/07/11/face-r
 
 ## How to Install Project
 
-Project ini dikembangkan pada MacOS, jadi untuk instalasi library dan kebutuhannya bisa di sesuaikan.
+Project ini dikembangkan pada MacOS M1, jadi untuk instalasi library dan kebutuhannya bisa di sesuaikan.
 Untuk menjalankan projek dapat mengikuti langkah-langkah berikut.
 - Buat direktori baru untuk menyimpan projek
 - Buka direktori tersebut melalui IDE Visual Studio Code atau code editor favorit
