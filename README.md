@@ -4,7 +4,7 @@
 
 Repository ini berisi implementasi proyek tugas akhir yang berjudul "Perancangan Arsitektur Face Recognition Untuk Presensi Karyawan".
 Sistem ini dikembangkan menggunakan bahasa pemrograman [python](https://www.python.org/), framework [flask](https://flask.palletsprojects.com/en/2.2.x/) dan [deepface](https://github.com/serengil/deepface) 
-dengan model yang digunakan adalah [`Dlib`](https://sefiks.com/2020/07/11/face-recognition-with-dlib-in-python/) dan detector [`opencv`](https://sefiks.com/2020/02/23/face-alignment-for-face-recognition-in-python-within-opencv/).
+dengan model yang digunakan adalah [`Dlib`](https://sefiks.com/2020/07/11/face-recognition-with-dlib-in-python/) dan face detector [`OpenCV`](https://sefiks.com/2020/02/23/face-alignment-for-face-recognition-in-python-within-opencv/).
 
 ## How to Run Project
 
@@ -14,7 +14,7 @@ Untuk menjalankan projek dapat mengikuti langkah-langkah berikut.
 - Buka direktori tersebut melalui IDE Visual Studio Code atau code editor favorit
 - Buka terminal, clone repository terlebih dahulu dengan menjalankan:
 ```shell
-$ git clone https://github.com/muhammadramadhann/VerificationSystemAttendance.git
+$ git clone https://github.com/hanifma/FaceRecognitionForPresenceApp.git
 ```
 - Buat virtual environment
 ```shell
